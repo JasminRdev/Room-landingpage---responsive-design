@@ -1,0 +1,337 @@
+:root {
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --VeryDarkGray: hsl(0, 0%, 27%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    color: var(--black);
+    background-color: var(--White);
+    line-height: 1.2rem;
+
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    color: var(--Dark-Gray);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+
+}
+
+.arrow-column {
+    display: flex;
+    width: 14.375rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--Black);
+    letter-spacing: 1rem;
+    margin-top: 1.5rem;
+}
+
+.arrow-column img {
+    margin-left: 2rem;
+    height: 100%;
+    align-self: center;
+}
+
+.menu-btn {
+    background: center center/contain url(./images/icon-hamburger.svg) no-repeat;
+    width: 1.25rem;
+    height: .9rem;
+    transition: .5s ease-in-out;
+}
+
+.menu-btn-open {
+    background: center center/contain url(./images/icon-close.svg) no-repeat;
+    width: 1.25rem;
+    height: .9rem;
+}
+
+.logo {
+    width: 4rem;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    position: absolute;
+    height: 3.75rem;
+    width: 100vw;
+    left: 0;
+    top: 0;
+
+    padding: 3.125rem 1.4375rem;
+    box-sizing: border-box;
+    align-items: center;
+    transition: .5s ease-in-out;
+    z-index: 20;
+
+}
+
+.background-color-bright {
+    background-color: var(--White);
+}
+
+.background-color-dark {
+    background-color: rgba(0, 0, 0, 0.73);
+}
+
+
+.nav-bar {
+    display: flex;
+    position: absolute;
+    top: 2.9rem;
+    right: 1.4375rem;
+    opacity: 0;
+}
+
+.nav-bar p {
+    margin-left: 1.43rem;
+    text-transform: lowercase;
+    font-size: 1rem;
+}
+
+.nav-links-open {
+    opacity: 1;
+}
+
+.arrows {
+    display: flex;
+}
+
+.mySlider {
+    height: 100vh;
+}
+
+.mySlider {
+    display: none;
+}
+
+
+
+
+
+/* phone */
+
+@media (min-width: 23em) {
+
+    .prev,
+    .next {
+        background-color: var(--Black);
+        width: .75rem;
+        height: 1.2rem;
+        padding: 1.25rem 1.375rem 1.25rem 1.375rem;
+    }
+
+
+
+    .img.a {
+        background: bottom right/cover url(./images/mobile-image-hero-1.jpg) no-repeat;
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .txt {
+        position: absolute;
+        bottom: 0;
+        padding: 2rem;
+        margin: 0 auto;
+        height: 40%;
+    }
+
+    .txt p {
+        font-size: clamp(1rem, .8rem + 1vw, 1.2rem);
+        margin-top: 1rem;
+        line-height:1.2em;
+    }
+
+    .txt h1{
+        margin-top: 0;
+        font-size: clamp(2rem, 2rem + 1vw, 3rem);
+
+    }
+
+    .lastText {
+        padding: 2rem;
+        min-height: 10rem;
+    }
+
+    .lastText p{
+        min-height: 40%;
+        font-size: clamp(1.2rem, .8rem + 1vw, 1.2rem);
+        margin-top: 1rem;
+        line-height:1.2em;
+    }
+
+
+    .img.b {
+        background: center center/cover url(./images/mobile-image-hero-2.jpg) no-repeat;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .img.c {
+        background: center center/cover url(./images/mobile-image-hero-3.jpg) no-repeat;
+        height: 50vh;
+        width: 100%;
+    }
+
+
+    .slider {
+        position: relative;
+    }
+
+    .arrows {
+        position: absolute;
+        bottom: 50%;
+        right: 0;
+    }
+
+        
+    }
+
+
+
+
+
+/* desktop */
+
+@media (min-width: 90em) {
+
+    .menu-btn {
+        display: none;
+    }
+
+
+    .nav-bar {
+        opacity: 1;
+        position: relative;
+        right: 0;
+        top: 0;
+        color: var(--White);
+    }
+
+    .nav-bar p {
+        margin: 3.75rem 2.25rem;
+    }
+
+    .logo {
+        margin: 3.75rem 4rem;
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .mySlider {
+        grid-template-columns: 60% 40%;
+        height: 68vh;
+
+    }
+
+    .img.a {
+        background: center center/cover url(./images/desktop-image-hero-1.jpg) no-repeat;
+        height: inherit;
+        width: 100%;
+    }
+
+    .img.b {
+        background: center center/cover url(./images/desktop-image-hero-2.jpg) no-repeat;
+        height: inherit;
+        width: 100%;
+    }
+
+    .img.c {
+        background: center center/cover url(./images/desktop-image-hero-3.jpg) no-repeat;
+        height: inherit;
+        width: 100%;
+    }
+
+
+
+
+
+    .info-about {
+        display: flex;
+        align-items: center;
+    }
+
+
+ p {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .lastText h2 {
+        font-size: 1.5rem;
+        letter-spacing: .25rem;
+        margin-bottom: 1rem;
+    }
+
+    .arrows{
+        bottom:0;
+        right: calc(40% - 7rem);
+    }
+
+    .arrow-column img{
+        margin-left: 2rem;
+    }
+
+    .txt{
+        width: calc(40% - 8rem);
+        right:0;
+        padding: 4rem;
+        top: 0;
+        height: calc(68vh - 8rem);
+        margin-top:max(3vh, 5rem);
+    }
+
+    .txt p{
+        font-size: 1.2rem;
+    }
+
+    .lastText p{
+        font-size: 1.2rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        line-height:2.5rem;
+        margin-top: 0;
+    }
+
+    .nav-bar p{
+        color:var(--White);
+    }
+}
